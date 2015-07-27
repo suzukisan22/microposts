@@ -12,4 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_ sprockets .
+//= require bootstrap-sprockets
