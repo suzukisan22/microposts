@@ -28,8 +28,8 @@ class UsersController < ApplicationController
      @user = User.find(params[:id])
     if @user.update(user_params)
       #保存に成功した場合はトップページへダイレクト
-      redirect_to @user, notice: 'Edit Profile'
-      render 'show'
+      flash[:success] = "Edit succeed"
+      redirect_to :action => "show"
     else
       #保存に失敗した場合は編集画面へ戻す
       render 'edit'
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password,
-                                 :password_confirmation, :area, :profile)
+                                 :password_confirmation, :area, :profile,:job)
   end
 end
   

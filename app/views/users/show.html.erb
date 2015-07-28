@@ -3,14 +3,20 @@
     margin-bottom: 20px;
   }
   
+  #edit{
+    font-size: 0.6em;
+    border: 1px solid #eeeeee;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
 </style>
 
-
-
-<h1>
-  <%= gravatar_for @user %>
+<h1><%= gravatar_for @user %>
   <%= @user.name %>
+<span id="edit" class="btn btn-default"><%= link_to "edit" , edit_user_path(@user) %></span>
 </h1>
+
 
 <h3>
   <div class="row">
@@ -20,25 +26,31 @@
   <div class="row mb20">
     <div class="col-md-3">Name</div>
   <div class="col-md-6"><%= @user.name %></div>
-  <div class="col-md-3"><%= link_to "edit" , edit_user_path(@user) %></div>
+  <div class="col-md-3"></div>
   </div>
   
   <div class="row mb20">
     <div class="col-md-3">Area</div>
   <div class="col-md-6"><%= @user.area %></div>
-  <div class="col-md-3"><%= link_to "edit" , edit_user_path(@user) %></div>
+  <div class="col-md-3"></div>
+  </div>
+  
+  <div class="row mb20">
+    <div class="col-md-3">Job</div>
+  <div class="col-md-6"><%= @user.job %></div>
+  <div class="col-md-3"></div>
   </div>
   
   <div class="row mb20">
     <div class="col-md-3">E-mail</div>
   <div class="col-md-6"><%= @user.email %></div>
-  <div class="col-md-3"><%= link_to "edit" , edit_user_path(@user) %></div>
+  <div class="col-md-3"></div>
   </div>
   
   <div class="row mb20">
     <div class="col-md-3">profile</div>
   <div class="col-md-6"><%= @user.profile %></div>
-  <div class="col-md-3"><%= link_to "edit" , edit_user_path(@user) %></div>
+  <div class="col-md-3"></div>
   </div>
   
 
