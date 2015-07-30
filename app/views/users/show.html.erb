@@ -1,11 +1,76 @@
+<style>
+  .mb10{
+    margin-bottom: 10px;
+  }
+  
+  #edit{
+    font-size: 0.75em;
+    border: 1px solid #eeeeee;
+    padding: 5px;
+    border-radius: 5px;
+    width: 40px;
+  }
+  h3{
+    text-indent: 2em;
+  }
+  
+</style>
+
+
 <div class="row">
   <aside class="col-md-4">
+    <div class="row">
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+        <span id="edit" class="btn btn-default"><%= link_to "edit" , edit_user_path(@user) %></span>
       </h1>
     </section>
+
+    <section>
+    <h4>
+
+
+      
+      
+  <div class="row mb10">
+    <div class="col-md-4 name">Name</div>
+  <div class="col-md-8"><%= @user.name %></div>
+  </div>
+  
+  <div class="row mb10">
+    <div class="col-md-4 name">Area</div>
+  <div class="col-md-8"><%= @user.area %></div>
+
+  </div>
+  
+  <div class="row mb10">
+    <div class="col-md-4 name">Job</div>
+  <div class="col-md-8"><%= @user.job %></div>
+
+  </div>
+  
+  <div class="row mb10">
+    <div class="col-md-4 name">E-mail</div>
+  <div class="col-md-8"><%= @user.email %></div>
+
+  </div>
+  
+  <div class="row mb10">
+    <div class="col-md-4 name">profile</div>
+  <div class="col-md-8"><%= @user.profile %></div>
+  </div>
+  
+
+
+  
+  
+</h4>
+    </section>
+
+
+</div>
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
@@ -17,3 +82,4 @@
     <% end %>
   </div>
 </div>
+
