@@ -1,0 +1,16 @@
+<div class="row">
+    
+    <div class="container">
+
+<h1>Followings</h1>
+<ol><h3><% @users.each do |f| %>
+    <%= gravatar_for @user %>
+<%= f.name %>
+<% end %>
+</h3>
+</ol>
+
+
+
+</div>
+</div>
