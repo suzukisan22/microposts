@@ -37,10 +37,10 @@
         <h3>
             <div class="row">
                 <div class="col-xs-6">
-                    <p><%= @user.following_users.count %><br><%= link_to "followings" , followings_url(@user) %></p>
+                    <p><%= @user.following_users.count %><br><%= link_to "followings" , followings_path(@user) %></p>
                 </div>
                 <div class="col-xs-6">
-                    <p><%= @user.followed_users.count %><br><%= link_to "followers" , followers_url(@user) %></p>
+                    <p><%= @user.followed_users.count %><br><%= link_to "followers" , followers_path(@user) %></p>
                 </div>
             </div>
         </h3>
