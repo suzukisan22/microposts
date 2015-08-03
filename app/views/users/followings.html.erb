@@ -3,12 +3,10 @@
     <div class="container">
 
 <h1>Followings</h1>
-<ol><h3><% @users.each do |f| %>
-    <%= gravatar_for @user %>
-<%= f.name %>
+<p><% @users.each do |f| %></p>
+<p><%= f.name %></p>
 <% end %>
-</h3>
-</ol>
+
 
 
 

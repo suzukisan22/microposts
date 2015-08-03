@@ -5,13 +5,11 @@
 
 <h1>Followers</h1>
 
-<h3>
-    <% @users.each do |f| %>
-    <%= gravatar_for @user %>
-<%= @user.name %>
-</h3>
-
+<p><% @users.each do |f| %></p>
+<p><%= f.name %></p>
 <% end %>
+
+
 
 </div>
 
