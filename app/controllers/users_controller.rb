@@ -1,10 +1,23 @@
 class UsersController < ApplicationController
   
+  def followings
+    @user = User.find_by(params[:id])
+  @users = @user.following_users 
+  end
+  
+  def followers
+    
+    @user = User.find_by(params[:id])
+  @users = @user.followed_users
+  end
+  
   
   
    def show # 追加
    @user = User.find(params[:id])
    @microposts = @user.microposts
+   @followings = @user.following_users
+   @followers = @user.followed_users
   end
   
   def new
@@ -41,7 +54,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password,
-                                 :password_confirmation, :area, :profile,:job)
+                                 :password_confirmation, :area, :profile, :job)
   end
 end
   
